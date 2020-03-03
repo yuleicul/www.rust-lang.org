@@ -52,5 +52,24 @@
                 </div>
             {{/each}}
         </div>
+        <header class="pb3 pt3">
+            <h2 class="f2">Alumni</h2>
+        </header>
+        <p>
+            We also want to thank all past members of the {{team-text team
+            name}} for their invaluable contributions!
+        </p>
+        <div class="flex flex-column flex-row-l flex-wrap-l justify-start">
+            {{#each team.members as |member|}}
+            <div class="w-100 w-33-l mb3 flex flex-row items-center">
+                <a class="mr3 w2 h2 flex-no-shrink" href="https://github.com/{{member.github}}">
+                    <img class="w-100 h-100 bg-white br2" src="https://avatars.githubusercontent.com/{{member.github}}">
+                </a>
+                <div>
+                    <a href="https://github.com/{{member.github}}">{{member.name}}</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
     {{/if}}
 </div>
